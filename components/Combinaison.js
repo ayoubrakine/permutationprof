@@ -10,7 +10,7 @@ const Combinaison = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [professeurs, setProfesseurs] = useState([]);
   useEffect(() => {
-    fetch('https://troubled-red-garb.cyclic.app/professeurs/')
+    fetch('https://tiny-worm-nightgown.cyclic.app/professeurs/')
       .then(response => response.json())
       .then(data => {
         const specialitesList = [...new Set(data.map(professeur => professeur.specialite))];

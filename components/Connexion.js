@@ -4,6 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { AuthContext } from './AuthContext';
 import bcrypt from 'react-native-bcrypt';
 
+
+
 const Connexion = () => {
   const { setUserLoggedIn, setUser } = useContext(AuthContext);
   const [email, setEmail] = useState('');
@@ -13,7 +15,7 @@ const Connexion = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs');
+      const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs/');
       const professors = await response.json();
 
       const foundProfessor = professors.find(
@@ -386,6 +388,5 @@ export default Connexion;
 // });
 
 // export default Connexion;
-
 
 

@@ -28,7 +28,7 @@ const Profil = () => {
   const handleUpdate = async () => {
     if (validateFields()) {
       try {
-        const response = await fetch('https://troubled-red-garb.cyclic.app/professeurs', {
+        const response = await fetch('https://tiny-worm-nightgown.cyclic.app/professeurs/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ const Profil = () => {
           onPress: async () => {
             try {
               await axios.delete(
-                `https://troubled-red-garb.cyclic.app/professeurs/${user.email}`
+                `https://tiny-worm-nightgown.cyclic.app/professeurs/${user.email}`
               );
               Alert.alert('Success', 'Professor deleted successfully');
               navigation.goBack();
